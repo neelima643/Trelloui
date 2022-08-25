@@ -1,6 +1,8 @@
 import './inputSelect.css'
 
 
+
+
 const inputSelect = ( {
     options,
     label,
@@ -8,7 +10,6 @@ const inputSelect = ( {
     divname,
     optionclass
 }
-
 
 ) => {
     return (

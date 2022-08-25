@@ -31,6 +31,10 @@ header {
     color: #ffffff;
 }
 
+.element:hover {
+    background-color: black;
+}
+
 .headeroption {
     background-color: rgba(0,0,0,0.4);
     height: 30px;

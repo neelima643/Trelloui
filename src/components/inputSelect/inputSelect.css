@@ -1,3 +1,3 @@
-option {
-    list-style: none;
- }
+select option:hover {
+    background-color: red !important;
+}

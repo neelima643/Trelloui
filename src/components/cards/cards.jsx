@@ -33,21 +33,18 @@ const Cards = () => {
 
     let dragged = null;
 
-    // document.addEventListener("dragstart", (event) => {
-    //     // store a ref. on the dragged elem
-    //     dragged = event.target;
-    //   });
+
       
       document.addEventListener("dragover", (event) => {
-        // prevent default to allow drop
+        
         
         event.preventDefault();
       });
       
       document.addEventListener("drop", (event) => {
-        // prevent default action (open as link for some elements)
+        
         event.preventDefault();
-        // move dragged element to the selected drop target
+        
         if (event.target.className === "doing" || event.target.className === "todoarea") {
           dragged.parentNode.removeChild(dragged);
           event.target.appendChild(dragged);
@@ -62,9 +59,6 @@ const Cards = () => {
         dragged = event.target;
         
 
-          //console.log(todoTask);
-        console.log(param.pos);
-        console.log(category);
     }
     
     
@@ -97,10 +91,11 @@ const Cards = () => {
                         />
                        </div> 
                    ))}
-
-                   {doingTask.map((cat) => (
+                    
+                    {doingTask.map((cat) => (
                        <div className="doing">
                         <h4>Doing</h4>
+                        <div className='doingarea'>
                         {cat.taskname.map((item, pos) => (
                             <div className='card'
                             onDragStart={ (event) => {onDragHandleStart(event, {item, pos}, 'doing')}}
@@ -109,10 +104,17 @@ const Cards = () => {
                             >
                                 {item}
                             </div>
+
+                            
                         )) }
-                        
-                       </div> 
-                   ))} 
+                        </div>
+                        <Button buttonclass='taskbtn' label='Add a task' icon={<FaPlus className='addicon' size={10}/>}
+                         onclick = { () => addTask()}
+                        />
+                        </div>
+                   ))}   
+                    
+                   
            
 
            
