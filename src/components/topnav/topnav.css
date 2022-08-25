@@ -1,0 +1,132 @@
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+}
+
+.nav {
+   padding: 10px 10px 10px 10px;
+    text-align: center;
+    
+}
+
+.nav1 {
+    padding: 5px 0px 5px 10px;
+     text-align: center;
+  
+ }
+
+.gridicon {
+    height: 30px;
+    width: 30px;
+}
+
+.element {
+    padding: 10px 10px 5px 10px;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.headeroption {
+    background-color: rgba(0,0,0,0.4);
+    height: 30px;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+
+    
+}
+
+.headeroption:hover, .headeroption:focus {
+    background-color: rgba(212, 209, 209, 0.4);
+
+}
+
+.head {
+    padding: 10px 0px 5px 0px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.trellologo {
+    height: 30px;
+    width: 30px;
+}
+
+.createbutton {
+    background-color: rgba(255,255,255,0.4);
+    border: none;
+    height: 80%;
+    margin: 6px 0px 0px 0px;
+    padding: 5px 15px 5px 15px;
+    color: #ffffff;
+    font-weight: bold;
+}   
+
+* {
+    box-sizing: border-box;
+}
+
+.rightside {
+    position: relative;
+    left: 850px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.searchdiv {
+    /* position: relative; */
+    background-color: rgba(255,255,255,0.4);
+    width: 200px;
+    margin: 12px 4px 12px 4px;
+    padding: 2px 10px 2px 15px;
+   
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+}
+.searchicon {
+    padding: 0px 10px 0px 0px;
+    
+}
+
+.infodiv {
+    color: #ffffff;
+    padding: 15px 10px 10px 10px;
+}
+
+.infoicon {
+    color: #ffffff;
+    height: 20px;
+}
+
+.notifdiv {
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 5px 10px 5px;
+    background-color: rgba(204, 79, 7, 0.87);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.menuicon {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.trelloicon {
+    color: #ffffff;
+    margin-top: 15px;
+}

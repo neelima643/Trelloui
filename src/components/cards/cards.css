@@ -1,0 +1,62 @@
+.rightdiv {
+    display: flex;
+    flex-direction:row ;
+    height: 100vh;
+    align-items: flex-start;
+}
+
+
+.todo {
+    background-color: #e9f0f1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 100px 10px 10px 20px;
+    padding: 0px 5px 5px 5px;
+    width: 16.67%;
+   clear: both;
+}
+
+h4 {
+    margin-left: 15px;
+}
+.doing {
+    background-color: #e9f0f1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 100px 10px 10px 5px;
+    padding: 0px 5px 5px 5px;
+    width: 16.67%;
+   clear: both;
+    
+}
+
+.card {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.current {
+    background-color: #e9f0f1;
+}
+
+.todoarea {
+    margin-bottom: 30px;
+}
+
+.taskbtn {
+    margin: 0px 0px 10px 20px;
+    width: 85%;
+    text-align: left;
+    padding: 10px ;
+    border: none;
+    background-color: transparent;
+}
+
+.taskbtn:hover {
+    background-color: rgb(216, 215, 215);
+}
+
+.addicon {
+    margin-right: 10px;
+}
