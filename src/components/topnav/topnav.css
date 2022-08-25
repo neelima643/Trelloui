@@ -32,7 +32,7 @@ header {
 }
 
 .element:hover {
-    background-color: black;
+    background-color: rgb(148, 148, 148);
 }
 
 .headeroption {
