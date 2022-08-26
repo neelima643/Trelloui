@@ -7,25 +7,33 @@
 
 
 .todo {
-    background-color: #e9f0f1;
+    background-color: #dfdfdf;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 100px 10px 10px 20px;
     padding: 0px 5px 5px 5px;
-    width: 16.67%;
-   clear: both;
+    width: 20%;
+   
 }
 
 h4 {
     margin-left: 15px;
 }
 .doing {
-    background-color: #e9f0f1;
+    background-color: #dfdfdf;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 100px 10px 10px 5px;
     padding: 0px 5px 5px 5px;
-    width: 16.67%;
-   clear: both;
+    width: 20%;
+   
     
+}
+
+.done {
+    background-color: #dfdfdf;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 100px 10px 10px 5px;
+    padding: 0px 5px 5px 5px;
+    width: 20%;
 }
 
 .card {
@@ -41,11 +49,17 @@ h4 {
 }
 
 .todoarea {
-    margin-bottom: 30px;
+    
+    padding: 10px 0px;
+}
+
+.doingarea {
+   
+    padding: 10px 0px;
 }
 
 .taskbtn {
-    margin: 0px 0px 10px 20px;
+    margin: 10px 0px 10px 20px;
     width: 85%;
     text-align: left;
     padding: 10px ;
@@ -54,7 +68,7 @@ h4 {
 }
 
 .taskbtn:hover {
-    background-color: rgb(216, 215, 215);
+    background-color: rgb(194, 189, 189);
 }
 
 .addicon {

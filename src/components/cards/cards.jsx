@@ -5,31 +5,41 @@ import { FaTrello, FaPlus,FaAngleDown } from 'react-icons/fa';
 
 const Cards = () => {
 
-    const [state, setState] = useState({
-        task: '',
-        todoTask: []
-    })
-
-    const addTask = () => {
+    //const [tasklist, setTaskList] = useState('');
+    const [todoTask, setTodoTask] = useState([]);
+    const [doingTask, setDoingTask] = useState([]);
+    const [doneTask, setDoneTask] = useState([]);
+    
+    const addtodoTask = () => {
         let t = prompt('Input the task');
-        setState({
-            todoTask: t,
-        })
-        todoTask.push(t)
-        console.log(todoTask)
+        
+        setTodoTask((oldList) => {
+            return [...oldList, t];
+        });
     }
 
         
+    const addDoingTask = () => {
+        let dotask = prompt('Input the task in progress');
 
+        setDoingTask((olddolist) => {
+            return [...olddolist, dotask]
+        });
+        
+    }
 
-    const todoTask = [
-        {taskname:['t1', 't2', 't3','t6', 't7', 't8']}
-    ]
+    const addDoneTask = () => {
+        let donetask = prompt('Enter the done tasks')
+        
+        setDoneTask((olddonelist) => {
+            return [...olddonelist, donetask]
+        })
+    }
+
+    
     
 
-    const doingTask = [
-        {taskname:['t4', 't5']}
-    ]
+   
 
     let dragged = null;
 
@@ -45,7 +55,7 @@ const Cards = () => {
         
         event.preventDefault();
         
-        if (event.target.className === "doing" || event.target.className === "todoarea") {
+        if (event.target.className === "doingarea" || event.target.className === "todoarea") {
           dragged.parentNode.removeChild(dragged);
           event.target.appendChild(dragged);
         }
@@ -70,14 +80,14 @@ const Cards = () => {
             <div className='rightdiv'>
                 
              
-                {todoTask.map((cat) => (
+                
                        <div className="todo"
                         
                        >
                         <h4>Todo</h4>
                         <div className='todoarea'>
 
-                        {cat.taskname.map((item, pos) => (
+                        {todoTask.map((item, pos) => (
                             <div className='card' 
                             draggable='true'
                             onDragStart={ (event) => {onDragHandleStart(event, {item, pos}, 'todo')}}
@@ -87,16 +97,16 @@ const Cards = () => {
                         )) }
                         </div>
                         <Button buttonclass='taskbtn' label='Add a task' icon={<FaPlus className='addicon' size={10}/>}
-                         onclick = { () => addTask()}
+                         onclick = { () => addtodoTask()}
                         />
                        </div> 
-                   ))}
+                  
                     
-                    {doingTask.map((cat) => (
+                    
                        <div className="doing">
                         <h4>Doing</h4>
                         <div className='doingarea'>
-                        {cat.taskname.map((item, pos) => (
+                        {doingTask.map((item, pos) => (
                             <div className='card'
                             onDragStart={ (event) => {onDragHandleStart(event, {item, pos}, 'doing')}}
                             draggable='true'
@@ -109,10 +119,31 @@ const Cards = () => {
                         )) }
                         </div>
                         <Button buttonclass='taskbtn' label='Add a task' icon={<FaPlus className='addicon' size={10}/>}
-                         onclick = { () => addTask()}
+                         onclick = { () => addDoingTask()}
                         />
                         </div>
-                   ))}   
+                   
+
+                        <div className="done">
+                        <h4>Done</h4>
+                        <div className='doingarea'>
+                        {doneTask.map((item, pos) => (
+                            <div className='card'
+                            onDragStart={ (event) => {onDragHandleStart(event, {item, pos}, 'doing')}}
+                            draggable='true'
+                            
+                            >
+                                {item}
+                            </div>
+
+                            
+                        )) }
+                        </div>
+                        <Button buttonclass='taskbtn' label='Add a task' icon={<FaPlus className='addicon' size={10}/>}
+                         onclick = { () => addDoneTask()}
+                        />
+                        </div>
+                   
                     
                    
            
